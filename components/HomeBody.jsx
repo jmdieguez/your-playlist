@@ -13,8 +13,6 @@ const HomeBody = ({session}) => {
                     Welcome {session.data.user?.name}!
                 </h1>
 
-                {console.log(session)}
-
                 {session.data.user?.image && (
                     <img
                     src={session.data.user.image}
