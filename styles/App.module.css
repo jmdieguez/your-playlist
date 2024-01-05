@@ -18,15 +18,57 @@
 }
 
 .track-container {
-  justify-content: center;
-  align-items: center;
-  position: relative;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+
+.single-track-container {
+  align-items: center;
+  justify-content: center;
+  width: 60%;
 }
 
 .track {
-  justify-content: center;
+  display: flex;
   align-items: center;
-  width: 200%;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
+
+.select-button,
+.remove-button {
+  all: unset;
+  outline: revert;
+  cursor: pointer;
+  color: white;
+  background-color: var(--accent-color, black);
+  border-radius: 9999px;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: all ease 75ms;
+  margin-left: 25px;
+}
+
+.remove-button {
+  background-color: rgb(231, 76, 60);
+}
+
+.select-button:hover,
+.remove-button:hover,
+.select-button:focus,
+.remove-button:focus {
+  transform: scale(1.05);
+}
+
+.select-button:disabled,
+.remove-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.selected-tracks-container {
+  padding-left: 50px;
+  flex: 1
+}
+
